@@ -8,13 +8,17 @@ const facultySchema = new Schema({
         required: true,
         unique: true,
     },
-    firstName: {
-        type: String,
-        required: true,
-    },
-    lastName: {
-        type: String,
-        required: true,
+    name: {
+        first: {
+            type: String,
+            required: true,
+            trim: true,
+        },
+        last: {
+            type: String,
+            required: true,
+            trim: true,
+        },
     },
     qualification: {
         type: String,
